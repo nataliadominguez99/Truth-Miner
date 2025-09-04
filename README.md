@@ -115,9 +115,6 @@ Repo Structure:
 ## Project Structure
 ```bash
 truthminer/
-├── assets/                        # Images, banners, and figures for README
-│   └── truthminer_banner.png
-│
 ├── dataset/                       # Data files
 │   ├── training_data.csv          # Provided training set (label, headline)
 │   ├── testing_data.csv           # Provided test set (labels=2, to be predicted)
