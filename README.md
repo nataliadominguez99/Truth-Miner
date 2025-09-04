@@ -1,14 +1,19 @@
-#TruthMiner: Fake News Detection with NLP & Transformers
->## :ojos: What is TruthMiner?
->In today’s world, **misinformation travels faster than facts**.
->TruthMiner is an AI-powered system that **detects fake news headlines** using both **classic Machine Learning** and **modern Transformer models (BERT)**.
->Think of it as your **digital truth detector** — analyzing headlines and predicting whether they’re **real** or **fake**.
+# TruthMiner: Fake News Detection with NLP & Transformers
+
+> ## 👀 What is TruthMiner?
+> In today’s world, **misinformation travels faster than facts**.  
+> TruthMiner is an AI-powered system that **detects fake news headlines** using both **classic Machine Learning** and **modern Transformer models (BERT)**.  
+> Think of it as your **digital truth detector** — analyzing headlines and predicting whether they’re **real** or **fake**.
+
 ---
-## :chincheta: Project Overview
-**TruthMiner** is a Natural Language Processing (NLP) project designed to automatically classify news headlines as either **real** or **fake**.
-The project combines both **classical machine learning models** and a **fine-tuned Transformer (DistilBERT)** to benchmark performance and highlight the trade-offs between traditional approaches and modern deep learning.
+
+## 📌 Project Overview
+**TruthMiner** is a Natural Language Processing (NLP) project designed to automatically classify news headlines as either **real** or **fake**.  
+The project combines **classical machine learning models** with a **fine-tuned Transformer (DistilBERT)** to benchmark performance and highlight the trade-offs between traditional approaches and modern deep learning.
+
 ---
-## :dardo: Goals
+
+## 🎯 Goals
 - Preprocess raw text into clean, usable features
 - Apply feature engineering with **TF-IDF** and embeddings
 - Train and compare multiple ML classifiers:
@@ -20,8 +25,10 @@ The project combines both **classical machine learning models** and a **fine-tun
 - Fine-tune **DistilBERT** for sequence classification
 - Evaluate models using **Accuracy, Precision, Recall, F1-score**
 - Generate predictions for the test dataset in the original file format
+
 ---
-## :carpeta_abierta: Dataset
+
+## 📂 Dataset
 - **Training data:** `dataset/training_data.csv`
   - Format: `label<TAB>headline`
   - `label = 0` → Fake News
@@ -29,43 +36,55 @@ The project combines both **classical machine learning models** and a **fine-tun
 - **Testing data:** `dataset/testing_data.csv`
   - Same format, but labels are placeholders (`2`)
   - Your model predicts and replaces them with `0` or `1`
+
 ---
-## :engranaje: Workflow
-### :uno: Preprocessing
-- Convert to lowercase
+
+## ⚙️ Workflow
+
+### 1️⃣ Preprocessing
+- Convert text to lowercase
 - Remove punctuation
 - Tokenize text
 - Remove stopwords
 - Apply stemming / lemmatization
-### :dos: Feature Engineering
+
+### 2️⃣ Feature Engineering
 - TF-IDF vectorization (unigrams + bigrams)
 - Embeddings for Transformer input
-### :tres: Modeling
+
+### 3️⃣ Modeling
 - Train classical ML models with TF-IDF features
 - Fine-tune **DistilBERT** using Hugging Face `Trainer` API
 - Apply stratified splits (80/20) for validation
-### :cuatro: Evaluation
+
+### 4️⃣ Evaluation
 Metrics reported:
 - **Accuracy**
 - **Precision**
 - **Recall**
 - **F1-score**
-### :cinco: Prediction
+
+### 5️⃣ Prediction
 - Replace `2` labels in the test set with predicted values
 - Save results as `testing_predictions.csv` (tab-separated, no header)
+
 ---
-## :gráfico_de_barras: Results (Validation Set)
-| Model                 | Accuracy | Precision | Recall | F1   |
+
+## 📊 Results (Validation Set)
+| Model                  | Accuracy | Precision | Recall | F1   |
 |------------------------|----------|-----------|--------|------|
-| Logistic Regression    | 0.94     | 0.94      | 0.94   | 0.94 |
-| Naïve Bayes            | 0.91     | 0.90      | 0.91   | 0.90 |
-| Random Forest          | 0.89     | 0.88      | 0.89   | 0.88 |
-| SVM (Linear)           | **0.95** | 0.94      | 0.95   | 0.95 |
-| XGBoost                | 0.93     | 0.93      | 0.93   | 0.93 |
-| DistilBERT (fine-tuned)| 0.96     | 0.96      | 0.96   | 0.96 |
-> :alto_voltaje: Transformers slightly outperformed classical ML, but SVM and Logistic Regression were strong baselines.
+| Logistic Regression     | 0.94     | 0.94      | 0.94   | 0.94 |
+| Naïve Bayes             | 0.91     | 0.90      | 0.91   | 0.90 |
+| Random Forest           | 0.89     | 0.88      | 0.89   | 0.88 |
+| SVM (Linear)            | **0.95** | 0.94      | 0.95   | 0.95 |
+| XGBoost                 | 0.93     | 0.93      | 0.93   | 0.93 |
+| DistilBERT (fine-tuned) | 0.96     | 0.96      | 0.96   | 0.96 |
+
+> ⚡ Transformers slightly outperformed classical ML, but SVM and Logistic Regression remain strong baselines.
+
 ---
-## :martillo_y_llave_inglesa: Tech Stack
+
+## 🛠️ Tech Stack
 - **Languages:** Python 3.11
 - **Libraries:**
   - `pandas`, `numpy`, `scikit-learn`
@@ -73,8 +92,10 @@ Metrics reported:
   - `torch`, `transformers`, `datasets`
 - **Environment:** macOS M3 Air, VS Code
 - **Hardware:** CPU + Apple MPS (GPU acceleration)
+
 ---
-## :cohete: Usage
+
+## 🚀 Usage
 ### Clone the repo
 ```bash
   git clone https://github.com/yourusername/truthminer.git
@@ -91,7 +112,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 Repo Structure:
-## :carpeta_abierta: Project Structure
+## Project Structure
 ```bash
 truthminer/
 ├── assets/                        # Images, banners, and figures for README
