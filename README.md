@@ -1,8 +1,4 @@
-# :periódico: TruthMiner: Fake News Detection with NLP & Transformers
-<p align="center">
-  <img src="https://github.com/sergie-o/truth_miner/blob/main/truthminer.png" width="900"/>
-</p>
----
+#TruthMiner: Fake News Detection with NLP & Transformers
 >## :ojos: What is TruthMiner?
 >In today’s world, **misinformation travels faster than facts**.
 >TruthMiner is an AI-powered system that **detects fake news headlines** using both **classic Machine Learning** and **modern Transformer models (BERT)**.
