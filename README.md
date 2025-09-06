@@ -120,7 +120,7 @@ truthminer/
 │   ├── testing_data.csv           # Provided test set (labels=2, to be predicted)
 │   └── testing_predictions.csv    # Model predictions output
 │
-├── project_truth_miner.ipynb      # Main Jupyter notebook (EDA, ML, DistilBERT fine-tuning)
+├── project_truthminer.ipynb      # Main Jupyter notebook (EDA, ML, DistilBERT fine-tuning)
 │
 ├── requirements.txt               # Python dependencies
 ├── README.md                      # Project documentation
